@@ -1,88 +1,24 @@
-body header{
-
-    
-    display: flex;
-    justify-content: center;
-    
-
-}
-
-
-
-body header p{
-
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Im/a.jpg);
     color: burlywood;
-    display: flex;
-    justify-content: center;
-    font-size: 50px;
-
 }
 
-body a{
-
-    display: flex;
-    justify-content: center;
+header {
+    background: linear-gradient(90deg,#050407,#454346,#050408, #050407,#454346,#050407); /* Petit dégradé */
     color: burlywood;
-    margin-top: 5%;
-    
-}
-
-.titre{
-    background: linear-gradient(90deg,#050407,#454346 , #050407,#454346,#050407); /* Petit dégradé */
-    color: burlywood;
-
-}
-
-
-
-.blaze{
-    margin-top: 0%;
-    font-size: 20pt;
-}
-
-body footer{
-    
-    color: burlywood;
-    position: relative;
     text-align: center;
-    margin-bottom: 0%;
-    
-
+    padding: 20px 0;
 }
 
-
-body footer ul.L {
-    display: flex;           /* Utilise flexbox pour afficher les éléments en ligne */
-    justify-content: center; /* Centre horizontalement les éléments */
-    padding: 0;              /* Supprime la marge interne par défaut de ul */
-    list-style: none;        /* Enlève les puces */
-    margin: 0;               /* Enlève les marges par défaut */
-    margin-bottom: 15%;
-    
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
-
-
-
-body footer ul.L li a{
-    margin: 0 10px;  /* Espacement horizontal entre les éléments de la liste */
-    text-decoration: none;
-    font-size: 15pt;
-    
-
-}
-
-
-
-body{
-
-    background-image:url(Im/a.jpg);
-                
-     
-           
-    
-
-}
-
 
 /* Ma petite image dans un joli petit rond */
 
@@ -96,28 +32,159 @@ body{
     }
 }
 
-.rotate-image{
-    width : 150px; 
-    height : 150px;
-    border: none;
-    -moz-border-radius : 75px;
-    -webkit-border-radius : 75px;
-    border-radius : 75px;
-    margin-top: 0%;
+.profile .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(Im/moa.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
     animation: rotate 5s linear infinite; /* Animation de rotation */
 }
 
+.bio {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(47, 47, 47);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-.square {
-    background-color:burlywood;
-    width:1000px;
-    height:200px;
-    border-radius: 1em;  /* Nouv unité */
+.skills, .experience {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(47, 47, 47);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.skills h2, .experience h2 {
+    text-align: center;
+    color: #050407; /* Couleur du texte des titres */
+    font-size: 35pt;
+    border-bottom: 3px solid burlywood; /* Ajoute une bordure sous les titres */
+    padding-bottom: 10px; /* Espacement sous le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills ul li {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Largeur minimale des colonnes */
+    gap: 0px; /* Aucune espace entre les éléments */
+    margin: 0; /* Enlever toute marge autour de la grille */
+    padding: 0; /* Enlever tout padding autour de la grille */
+}
+
+.skill-item {
+    text-align: center;
+    margin: 0; /* Supprimer les marges autour des éléments */
+    padding: 0; /* Enlever le padding supplémentaire */
+}
+
+.skill-logo {
+    width: 120px; /* Garder la taille des logos inchangée */
+    height: 120px;
+    margin: 0; /* Aucune marge autour des logos */
+    transition: transform 0.3s ease;
+}
+
+.skill-item p {
+    margin: 0;
+    font-size: 16px;
+    color: burlywood;
+}
+
+.skill-item a {
+    text-decoration: none;
+}
+
+.skill-logo:hover {
+    transform: scale(1.1);
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Espacement uniforme */
+    margin: 20px 0;
+}
+
+.experience .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event {
+    background-color: orange;
+    padding: 20px; /* Un peu plus d'espace intérieur pour équilibrer avec la grande police */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-height: 100px; /* Ajuste la hauteur pour accueillir le texte plus grand */
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; /* Centre horizontalement le contenu */
+    font-size: 28px; /* Taille de police très grande */
+    font-weight: bold; /* Texte en gras pour le rendre encore plus visible */
+    color: #050407; /* Couleur de texte pour un bon contraste */
+}
+
+.experience .timeline .event {
+    background-color: burlywood;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
     
 }
-.container {
+
+.experience .timeline .event a {
+    color: white; /* Couleur blanche pour les liens */
+    text-decoration: none; /* Enlever le soulignement des liens */
+}
+
+.experience .timeline .event a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+footer {
+    background: linear-gradient(90deg,#050407,#454346,#050408, #050407,#454346,#050407); /* Petit dégradé */
+    color: burlywood;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: center;  /* Centre horizontalement */
-    height: 100vh;            /* S'assure que le conteneur prend toute la hauteur de la fenêtre d'affichage */
-    margin-top: 5%;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: burlywood; /* Couleur des icônes */
+    font-size: 24px; /* Taille des icônes */
+}
+
+footer ul li a:hover {
+    color: #050407; /* Couleur de survol des icônes */
 }
